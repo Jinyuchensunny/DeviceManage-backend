@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: 'root'
+    password: 'root'
+    url: jdbc:mysql://localhost:3306/devicemanagespringboot?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #type: com.alibaba.druid.pool.DruidDataSource
+
+#mybatis配置
+mybatis:
+  mapper-locations: classpath:org/mapper/*.xml
+  type-aliases-package: zjc.devicemanage.org.model
+
+#pagehelper分页插件
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+
+
